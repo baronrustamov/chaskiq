@@ -4,7 +4,7 @@ x-app:
   &app
   build:
     context: .
-    dockerfile: ./Dockerfile.development
+    dockerfile: ./Dockerfile
     args:
       RUBY_VERSION: '3.2.0'
       PG_MAJOR: '14'
@@ -14,7 +14,7 @@ x-app:
   environment:
     &env
     NODE_ENV: development
-    RAILS_ENV: ${RAILS_ENV:-development}
+    RAILS_ENV: ${RAILS_ENV}
     ANYCABLE_DEBUG: ${DEBUG:-0}
     ANYCABLE_RPC_HOST: 0.0.0.0:50051
   image: chaskiq/chaskiq:1.1.0
