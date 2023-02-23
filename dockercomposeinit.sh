@@ -3,6 +3,7 @@
 docker-compose build
 docker-compose run rails bundle install
 docker-compose run rails yarn install
+docker-compose run rails yarn dev
 docker-compose run rails db:setup 
 docker-compose run rails db:create
 docker-compose run rails db:schema:load
