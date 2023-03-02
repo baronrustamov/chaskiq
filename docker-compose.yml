@@ -4,7 +4,7 @@ x-app:
   &app
   build:
     context: .
-    dockerfile: ./Dockerfile.development
+    dockerfile: ./Dockerfile
     args:
       RUBY_VERSION: '3.2.0'
       PG_MAJOR: '14'
